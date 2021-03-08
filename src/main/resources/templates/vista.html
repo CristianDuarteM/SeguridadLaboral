@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	
+	<h1 th:text="${titulo}"></h1>
+	
+	<table>
+	<thead>
+	<tr>
+	<th>Id</th>
+	<th>Nombre</th>
+	<th>Apellido</th>
+	<th>Tipo de lesion</th>
+	<th>Cedula</th>
+	</tr>
+	</thead>
+	<tbody>
+		<tr th:each="persona: ${personas}">
+		
+		<td th:text="${persona.id}"></td>
+		<td th:text="${persona.Nombre}"></td>
+		<td th:text="${persona.Apellido}"></td>
+		<td th:text="${persona.tipolesion}"></td>
+		<td th:text="${persona.cedula}"></td>
+		
+		</tr>
+	</tbody>
+	</table>
+	
+</body>
+</html>
