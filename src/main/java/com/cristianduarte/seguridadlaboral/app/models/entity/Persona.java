@@ -7,26 +7,33 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "personas")
 public class Persona implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
+
 	@Id
+	@Column(name = "idpersonas")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_persona")
 	public Long id;
 	
 	public String nombre;
 	
 	public String apellido;
 	
+	public String cedula;
+	
+	@Column(name = "tipo_lesion")
 	public String tipolesion;
 	
-	public String cedula;
 	
 	
 
 	public Persona() {
+		
 	}
 
 	public Long getId() {

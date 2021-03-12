@@ -7,4 +7,6 @@ import com.cristianduarte.seguridadlaboral.app.models.entity.Persona;
 public interface IPersonaDao {
 
 	public List<Persona> findAll();
+	
+	public void save(Persona persona);
 }
